@@ -4,6 +4,10 @@ function add(x,y) {
     return x + y
 }
 
+function(x,y){
+    return x + y
+}
+
 
 // 2-1. 함수 표현식1: 함수이름 생략
 var add = function(x,y){
