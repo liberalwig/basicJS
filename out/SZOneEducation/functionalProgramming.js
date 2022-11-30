@@ -132,8 +132,9 @@ map([1,2,3,4,5],function(val){ return val*val*2 ;}) // output: [2, 8, 18, 32, 50
 ----------------------------------------------------
 
 let curry = function(fn){
-return function(a,b) {
-    if(arguments.length == 2) return fn(a,b)
+    return function(a,b) {
+        if(arguments.length == 2)
+            return fn(a,b)
     return function (b) {
         return fn(a,b)
     }}}
