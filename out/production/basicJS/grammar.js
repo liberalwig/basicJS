@@ -9,7 +9,7 @@ function(x,y){
 }
 
 
-// 2-1. 함수 표현식1: 함수이름 생략
+// 2-1. 함수 표현식1: 함수이름 생략: 익명함수를 변수에 넣음. 한 번 쓰고 더 쓰지 않
 var add = function(x,y){
     return x + y
 }
@@ -18,6 +18,14 @@ var add = function(x,y){
 var add = function plus(x,y){
     return x + y
 }
+
+
+function plus(x,y){
+    return x + y
+}
+
+var qq = plus;
+var ww = plus;
 
 
 // 3. Function 생성자 함수
