@@ -2,7 +2,7 @@
 const add = (a,b) => a+b;
 const sub = (a,b) => a-b;
 
-console.log(add(10, 10)); // 20
+console.log(add(10, 10));
 console.log(add(10, 20)); // 30
 console.log(add(10, 30)); // 40
 console.log(add(10, 40)); // 50
