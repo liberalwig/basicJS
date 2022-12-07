@@ -52,7 +52,7 @@ function _map(list, mapper) {
 
 
 function _each(list, iter) {
-    var keys = keys(list);
+    var keys = _keys(list);
     for (var i = 0, len = keys.length; i < len; i++) {
         iter(list[keys[i]], keys[i]);
     }
@@ -66,13 +66,11 @@ var _get = _curryr(function (obj, key) {
 
 function _curryr(fn) {
     return function (a, b) {
-        return arguments.length == 2 ? fn(a, b) : function (b) {
-            return fn(b, a);
-        };
+        return arguments.length == 2 ? fn(a, b) : function (b) {return fn(b, a); };
     }
 }
 
-function _key(obj) {
+function _keys(obj) {
     return _is_object(obj) ? Object.keys(obj) : [];
 }
 
@@ -97,11 +95,8 @@ var users = [
     {id: 8, name: 'MP', age: 23}
 ];
 
+
 _go(users,
     _filter(function (user) { return user.age >= 30; }),
     _map(_get('name')),
     console.log);
-
-
-
-
